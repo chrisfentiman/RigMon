@@ -96,7 +96,7 @@ bot.onText(/\/pools/, msg => {
 });
 
 bot.onText(/\/status/, msg => {
-  msgtext = "<b>RIG STATISTICS<b> \n";
+  msgtext = "<b>RIG STATISTICS</b> \n";
   rigs = Object.assign({}, all);
   for (var f in rigs) {
     rig = rigs[f];
@@ -119,7 +119,7 @@ bot.onText(/\/status/, msg => {
           msgtext = msgtext + rig.hash + " H/s, ";
         }
       }
-      msgtext = msgtext + "Time:" + up + "\n";
+      msgtext = msgtext + "Time: " + up + "\n";
     } else {
       time = moment.unix(rig.last_seen);
       last = moment(time).fromNow();
